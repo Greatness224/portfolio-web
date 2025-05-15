@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edward Asamoah - Purpose Driven Life</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        .hero-bg {
+            background: url('https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+        
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+        
+        .quote-mark {
+            font-size: 5rem;
+            line-height: 1;
+            opacity: 0.2;
+            position: absolute;
+            top: -1rem;
+            left: -1rem;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div>
+                        <a href="#" class="flex items-center">
+                            <span class="font-playfair text-2xl font-bold text-indigo-800">Edward Asamoah</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-indigo-800 font-medium hover:text-indigo-600 transition-all">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-indigo-600 transition-all">My Story</a>
+                    <a href="#blog" class="text-gray-600 hover:text-indigo-600 transition-all">Blog</a>
+                    <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition-all">Connect</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 focus:outline-none">
+                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white py-4 px-4 border-t">
+            <a href="#home" class="block py-2 text-gray-600 hover:text-indigo-600 transition-all">Home</a>
+            <a href="#about" class="block py-2 text-gray-600 hover:text-indigo-600 transition-all">My Story</a>
+            <a href="#blog" class="block py-2 text-gray-600 hover:text-indigo-600 transition-all">Blog</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-indigo-600 transition-all">Connect</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg py-32 relative text-white">
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <div class="md:w-2/3">
+                <h1 class="font-playfair text-4xl md:text-6xl font-bold mb-6 leading-tight">My life is not just mine to live, but mine to give.</h1>
+                <p class="text-xl mb-8">Welcome to my journey of resilience, transformation, and spiritual awakening.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#about" class="bg-indigo-700 hover:bg-indigo-600 text-white px-8 py-3 rounded-full font-medium transition-all text-center">Discover My Story</a>
+                    <a href="#blog" class="bg-white hover:bg-gray-100 text-indigo-800 px-8 py-3 rounded-full font-medium transition-all text-center">Read My Blog</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-4">My Journey</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center mb-16">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-10">
+                    <h3 class="font-playfair text-2xl font-bold mb-4">From Kumasi to the World</h3>
+                    <p class="text-gray-600 mb-4">Born on October 22, 2000, in Kumasi, the heart of Ghana's Ashanti Region, I am a purpose driven individual whose life is a testament to resilience, transformation, and spiritual awakening.</p>
+                    <p class="text-gray-600">As the eldest child in a supportive nuclear family of three, with two younger sisters, I grew up with a strong sense of responsibility, leadership, and care for those around me.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Kumasi, Ghana" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center mb-16">
+                <div class="md:w-1/2 order-1 md:order-2 mb-8 md:mb-0 md:pl-10">
+                    <h3 class="font-playfair text-2xl font-bold mb-4">Educational Journey</h3>
+                    <p class="text-gray-600 mb-4">My educational journey began at Global Educational Complex, continued at Konongo Odumasi Senior High School, and progressed into higher learning at the College of Accountancy, where I was to pursue General Arts for years.</p>
+                    <p class="text-gray-600">That period sparked a deeper sense of self-discovery and a hunger for meaning beyond conventional paths. I later advanced my studies abroad, where I was supposed to continue my education at Cape Breton University, embracing global perspectives that helped refine my sense of identity and purpose.</p>
+                </div>
+                <div class="md:w-1/2 order-2 md:order-1">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Education" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+            </div>
+            
+            <div class="bg-indigo-50 rounded-xl p-8 md:p-12 relative overflow-hidden">
+                <span class="quote-mark font-playfair absolute">"</span>
+                <div class="relative z-10">
+                    <h3 class="font-playfair text-2xl font-bold mb-6">Spiritual Awakening & Purpose</h3>
+                    <p class="text-gray-700 mb-6">More than just a student or aspiring professional, I am a seeker, a young man on a path of spiritual growth, self-realization, and service. I view my life not merely in terms of personal success, but in how my story can uplift others.</p>
+                    <p class="text-gray-700">Through my spiritual journey, I have encountered powerful moments of awakening that reshaped my worldview. These experiences now form the core of the messages I share with the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-4">My Mission</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md card-hover transition-all">
+                    <div class="text-indigo-600 mb-4">
+                        <i class="fas fa-hands-helping text-4xl"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-3">Uplift Others</h3>
+                    <p class="text-gray-600">I believe that every setback holds a hidden purpose, and every challenge carries the seed of spiritual elevation. My goal is to help others see this truth in their own lives.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md card-hover transition-all">
+                    <div class="text-indigo-600 mb-4">
+                        <i class="fas fa-globe-africa text-4xl"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-3">Create Community</h3>
+                    <p class="text-gray-600">Through this platform, I'm building a digital sanctuary of hope, healing, and motivation where people can share stories and find strength together.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-md card-hover transition-all">
+                    <div class="text-indigo-600 mb-4">
+                        <i class="fas fa-lightbulb text-4xl"></i>
+                    </div>
+                    <h3 class="font-playfair text-xl font-bold mb-3">Inspire Change</h3>
+                    <p class="text-gray-600">With bold dreams of becoming a global voice for change, I'm committed to growth, truth, and living a life that inspires others to do the same.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-4">Latest Reflections</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition-all">
+                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1999&q=80" alt="Finding Purpose" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-indigo-600 text-sm mb-2">Spiritual Growth • June 15, 2023</div>
+                        <h3 class="font-playfair text-xl font-bold mb-3">Finding Purpose in the Struggle</h3>
+                        <p class="text-gray-600 mb-4">How my financial challenges in pursuing education abroad became my greatest spiritual lesson...</p>
+                        <a href="#" class="text-indigo-600 font-medium hover:text-indigo-800 transition-all">Read More →</a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition-all">
+                    <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1973&q=80" alt="Family" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-indigo-600 text-sm mb-2">Personal Growth • May 28, 2023</div>
+                        <h3 class="font-playfair text-xl font-bold mb-3">The Gift of Being the Eldest</h3>
+                        <p class="text-gray-600 mb-4">Lessons in leadership and responsibility from growing up as the big brother in a Ghanaian family...</p>
+                        <a href="#" class="text-indigo-600 font-medium hover:text-indigo-800 transition-all">Read More →</a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover transition-all">
+                    <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Transformation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="text-indigo-600 text-sm mb-2">Transformation • April 10, 2023</div>
+                        <h3 class="font-playfair text-xl font-bold mb-3">When Plans Fall Apart: A Spiritual Awakening</h3>
+                        <p class="text-gray-600 mb-4">My journey from disappointment to discovering a higher calling when my academic plans changed...</p>
+                        <a href="#" class="text-indigo-600 font-medium hover:text-indigo-800 transition-all">Read More →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-indigo-700 hover:bg-indigo-600 text-white px-8 py-3 rounded-full font-medium transition-all">View All Blog Posts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-4">Let's Connect</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="font-playfair text-2xl font-bold mb-6">Share Your Story</h3>
+                    <p class="text-gray-600 mb-6">I believe in the power of shared experiences. If my journey resonates with you or you'd like to share your own story of transformation, I'd love to hear from you.</p>
+                    <p class="text-gray-600 mb-8">Together, we can create a community of hope and healing.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-indigo-600"></i>
+                            </div>
+                            <span class="text-gray-700">edwardasamoah434@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fab fa-instagram text-indigo-600"></i>
+                            </div>
+                            <span class="text-gray-700">@Greatness</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                                <i class="fab fa-twitter text-indigo-600"></i>
+                            </div>
+                            <span class="text-gray-700">@GEDULAH</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-white p-8 rounded-xl shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-indigo-700 hover:bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium transition-all">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-indigo-800 text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="font-playfair text-3xl font-bold mb-4">Join Our Community</h2>
+            <p class="text-xl mb-8">Subscribe to receive inspiration, updates, and exclusive content straight to your inbox.</p>
+            <form class="flex flex-col sm:flex-row max-w-md mx-auto">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-l-lg sm:rounded-r-none rounded-r-lg focus:outline-none text-gray-800 mb-2 sm:mb-0">
+                <button type="submit" class="bg-white text-indigo-800 px-6 py-3 font-medium rounded-r-lg sm:rounded-l-none rounded-l-lg hover:bg-gray-100 transition-all">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <a href="#" class="font-playfair text-2xl font-bold text-white mb-4 inline-block">Edward Asamoah</a>
+                    <p class="text-gray-400 max-w-xs">A sanctuary of hope, healing, and motivation for those on their journey of transformation.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="font-medium text-lg mb-4">Navigation</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-white transition-all">Home</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition-all">My Story</a></li>
+                            <li><a href="#blog" class="text-gray-400 hover:text-white transition-all">Blog</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white transition-all">Connect</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-medium text-lg mb-4">Resources</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-all">Blog</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-all">Videos</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-all">Reflections</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-all">Community</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-medium text-lg mb-4">Connect</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center transition-all">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Edward Asamoah. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
